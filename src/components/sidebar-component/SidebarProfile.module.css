@@ -1,0 +1,49 @@
+.main {
+  display: flex;
+  height: min-content;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.mainUnactive {
+  display: flex;
+  height: min-content;
+  width: 100%;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.main > img {
+  border-radius: 5px;
+}
+
+.main > p {
+  margin: 0px 10px;
+  width: 100%;
+}
+
+.mainUnactive > img {
+  border-radius: 5px;
+}
+
+.mainUnactive > p {
+  margin: 0px 10px;
+  width: 100%;
+}
+
+.button {
+  cursor: pointer;
+}

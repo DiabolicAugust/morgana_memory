@@ -1,0 +1,16 @@
+.main {
+  width: 18%;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 45px 10px 0px 10px;
+}
+
+.main > p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.padding {
+  margin-top: 25px;
+}

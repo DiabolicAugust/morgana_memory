@@ -1,0 +1,20 @@
+.main {
+  border-radius: 5px;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.date {
+  color: aliceblue;
+}
+
+.title {
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.description {
+  margin-top: 5px;
+  color: black;
+}

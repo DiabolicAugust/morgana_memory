@@ -1,0 +1,17 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+  padding: 30px 15px 50px 15px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
