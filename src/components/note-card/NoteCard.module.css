@@ -2,10 +2,13 @@
   border-radius: 5px;
   background-color: lightgray;
   padding: 10px;
+  margin: 20px 0px;
+  cursor: pointer;
 }
 
 .date {
   color: aliceblue;
+  text-align: end;
 }
 
 .title {
@@ -17,4 +20,14 @@
 .description {
   margin-top: 5px;
   color: black;
+  white-space: pre-line;
+  display: -webkit-box;
+  height: 26 * 1.4 * 3; /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: 26;
+  line-height: 1.4;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

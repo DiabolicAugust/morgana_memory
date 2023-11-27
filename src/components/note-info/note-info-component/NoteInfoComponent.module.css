@@ -1,0 +1,11 @@
+.main {
+  width: min-content;
+  min-width: 35%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main > p {
+  color: gray;
+}

@@ -1,0 +1,9 @@
+.main {
+  height: 100vh; /* Adjust the height as needed */
+  width: 85%;
+  border-left: 1px solid gray;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange child elements in a column */
+}
