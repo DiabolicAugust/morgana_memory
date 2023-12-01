@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import CardComponent from '../../components/card-component/CardComponent';
 import { MdAdd } from 'react-icons/md';
 import styles from './Notes.module.css';
-import NoteCard from '../../components/note-card/NoteCard';
-import Note from '../note/Note';
+import NoteCard from '../../components/note-components/note-card/NoteCard';
+import Note from './note/Note';
 import { getNotes, setNewNote } from '../../services/localStorageService';
 
 function Notes() {

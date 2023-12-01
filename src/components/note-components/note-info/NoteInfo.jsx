@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './NoteInfo.module.css';
-import NoteInfoComponent from './note-info-component/NoteInfoComponent';
+import NoteInfoComponent from './note-info-components/NoteInfoComponent';
 
 const NoteInfo = ({ note }) => {
   return (
