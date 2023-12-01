@@ -4,7 +4,7 @@ import { MdAdd } from 'react-icons/md';
 import styles from './Notes.module.css';
 import NoteCard from '../../components/note-components/note-card/NoteCard';
 import Note from './note/Note';
-import { getNotes, setNewNote } from '../../services/localStorageService';
+import { getNotes, setNewNote } from '../../services/notesLocalStorageService';
 
 function Notes() {
   const [notes, setNotes] = useState([]);

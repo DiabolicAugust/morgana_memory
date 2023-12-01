@@ -1,0 +1,38 @@
+.mainActive {
+  width: max-content;
+  min-width: 40%;
+  max-width: 100%;
+  padding: 20px;
+  margin: 15px 0px;
+  border-radius: 5px;
+  background-color: gray;
+}
+
+.mainInactive {
+  width: max-content;
+  min-width: 40%;
+  max-width: 100%;
+  padding: 20px;
+  margin: 15px 0px;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+
+.titleActive {
+  color: white;
+}
+
+.titleInactive {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.todoCompletedCaption {
+  text-align: end;
+  color: white;
+}
+
+.todoUncompletedCaption {
+  text-align: start;
+  color: white;
+}

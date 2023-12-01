@@ -1,0 +1,19 @@
+.input {
+  height: 20px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.button {
+  padding: 0px 10px;
+}
+
+.main {
+  width: 32%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}

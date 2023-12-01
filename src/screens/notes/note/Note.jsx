@@ -2,7 +2,7 @@ import styles from './Note.module.css';
 import NoteTopBar from './note-top-bar/NoteTopBar';
 import NoteInfo from '../../../components/note-components/note-info/NoteInfo';
 import NoteDescription from '../../../components/note-components/note-description/NoteDescription';
-import { updateNoteDesc } from '../../../services/localStorageService';
+import { updateNoteDesc } from '../../../services/notesLocalStorageService';
 
 const Note = ({ note }) => {
   return (
