@@ -17,7 +17,9 @@ function Notes() {
   }, [updateNotes]);
 
   function onCardClick(id) {
-    setCurrentNote(id);
+    if (id !== currentNote) {
+      setCurrentNote(id);
+    }
   }
 
   function setEmptyNote() {
@@ -49,8 +51,8 @@ function Notes() {
           )}
         </div>
       </div>
-      {currentNote ? (
-        <Note note={notes.filter((e) => e.id == currentNote)[0]} />
+      {!!currentNote ? (
+        <Note note={notes.find((e) => e.id === currentNote)} />
       ) : (
         <div>Choose the note</div>
       )}

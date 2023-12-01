@@ -4,7 +4,7 @@ import styles from './NoteDescription.module.css';
 const NoteDescription = ({ description, onChange }) => {
   const [desc, setDesc] = useState(description);
 
-  useEffect(() => onChange(desc), [desc]);
+  useEffect(() => setDesc(description), [description]);
 
   return (
     <div className={styles.main}>
@@ -12,6 +12,7 @@ const NoteDescription = ({ description, onChange }) => {
         type="text"
         value={desc}
         onChange={(text) => {
+          onChange(text.target.value);
           setDesc(text.target.value);
         }}
       />

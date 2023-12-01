@@ -3,19 +3,16 @@ import styles from './Note.module.css';
 import NoteTopBar from './note-top-bar/NoteTopBar';
 import NoteInfo from '../../components/note-info/NoteInfo';
 import NoteDescription from '../../components/note-description/NoteDescription';
-import { setNote, updateNoteDesc } from '../../services/localStorageService';
+import { updateNoteDesc } from '../../services/localStorageService';
 
 const Note = ({ note }) => {
-  console.log(note);
-  const [myNote, setMyNote] = useState(note);
-
   return (
     <div className={styles.main}>
-      <NoteTopBar title={myNote.title} />
-      <NoteInfo note={myNote} />
+      <NoteTopBar title={note.title} />
+      <NoteInfo note={note} />
       <NoteDescription
-        description={myNote.description}
-        onChange={(newDesc) => updateNoteDesc(newDesc, myNote.id)}
+        description={note.description}
+        onChange={(newDesc) => updateNoteDesc(newDesc, note.id)}
       />
     </div>
   );
