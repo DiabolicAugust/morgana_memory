@@ -1,11 +1,11 @@
-.main {
-  width: 18%;
+.myNotes {
+  width: 20%;
   background-color: white;
   box-sizing: border-box;
-  padding: 45px 10px 0px 10px;
+  padding: 20px 10px 0px 10px;
 }
 
-.main > p {
+.myNotes > p {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -13,4 +13,9 @@
 
 .padding {
   margin-top: 25px;
+}
+
+.main {
+  display: flex;
+  width: 100%;
 }

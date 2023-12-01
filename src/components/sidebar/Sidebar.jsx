@@ -5,15 +5,14 @@ import styles from './Sidebar.module.css';
 import { IoIosArrowDown } from 'react-icons/io';
 import { SlSettings } from 'react-icons/sl';
 // import { GoKebabHorizontal } from 'react-icons/go';
-import SidebarComponent from '../sidebar-component/SidebarComponent';
+import CardComponent from '../card-component/CardComponent';
 
 const Sidebar = () => {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <div style={{ display: 'flex' }}>
       <div className={styles.main}>
-        <SidebarComponent
+        <CardComponent
           text="Jhon Snow"
           imgElement={
             <img
@@ -27,7 +26,7 @@ const Sidebar = () => {
         <div className={styles.menu}>
           {menuData.map((e, index) => (
             <NavLink to={e.url} key={index} style={{ textDecoration: 'none' }}>
-              <SidebarComponent
+              <CardComponent
                 text={e.title}
                 imgElement={e.image}
                 isSimpleClassName={location.pathname.includes(e.url)}
@@ -35,7 +34,7 @@ const Sidebar = () => {
             </NavLink>
           ))}
         </div>
-        <SidebarComponent
+        <CardComponent
           text="Settings"
           imgElement={<SlSettings size="24px" />}
           onComponentClick={() => console.log('meow')}

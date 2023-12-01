@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './SidebarProfile.module.css';
+import styles from './CardComponent.module.css';
 
-const SidebarComponent = ({
+const CardComponent = ({
   text,
   imgElement,
   buttonElement,
@@ -25,4 +25,4 @@ const SidebarComponent = ({
   );
 };
 
-export default SidebarComponent;
+export default CardComponent;

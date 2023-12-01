@@ -5,9 +5,8 @@
   align-items: center;
   background-color: white;
   border-radius: 5px;
-  padding: 10px;
+  margin: 10px;
   box-sizing: border-box;
-  margin-top: 10px;
   color: black;
   cursor: pointer;
 }
