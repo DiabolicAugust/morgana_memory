@@ -14,7 +14,7 @@ const BookCard = ({ book }) => {
       <div className={styles.author}>{book.author}</div>
       <div className={styles.score}>
         {Array.from({ length: book.score }, (_, i) => (
-          <TiStarFullOutline size="3em" />
+          <TiStarFullOutline size="3em" color="orange" />
         ))}
       </div>
       <div className={styles.isCompleted}>
