@@ -1,11 +1,11 @@
 .main {
+  padding: 1em;
   display: flex;
   height: min-content;
   width: 100%;
   align-items: center;
   background-color: white;
   border-radius: 5px;
-  margin: 10px;
   box-sizing: border-box;
   color: black;
   cursor: pointer;

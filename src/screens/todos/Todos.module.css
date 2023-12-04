@@ -1,0 +1,9 @@
+.main {
+  padding: 20px 10px 0px 10px;
+  height: 100vh;
+  width: 75%;
+}
+
+.main > h1 {
+  font-size: 4em;
+}

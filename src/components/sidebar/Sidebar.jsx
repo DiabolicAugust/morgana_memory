@@ -10,7 +10,7 @@ import CardComponent from '../card-component/CardComponent';
 const Sidebar = () => {
   const location = useLocation();
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: 'flex', width: '100vw' }}>
       <div className={styles.main}>
         <CardComponent
           text="Jhon Snow"
@@ -40,7 +40,7 @@ const Sidebar = () => {
           onComponentClick={() => console.log('meow')}
         />
       </div>
-      <Outlet />
+      <Outlet className={styles.outlet} />
     </div>
   );
 };

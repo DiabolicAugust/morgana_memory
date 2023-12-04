@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './NoteCard.module.css';
-import { formatShortDate } from '../../services/dateService';
+import { formatShortDate } from '../../../services/dateService';
 
 const NoteCard = ({ note, onClick }) => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './NoteTopBar.module.css';
 import { IoIosArrowForward } from 'react-icons/io';
 import { GoKebabHorizontal } from 'react-icons/go';
-import Divider from '../../../components/divider/Divider';
+import Divider from '../../../../components/divider/Divider';
 
 const NoteTopBar = ({ title }) => {
   return (
