@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import CardComponent from '../../components/card-component/CardComponent';
-import { MdAdd } from 'react-icons/md';
-import styles from './Notes.module.css';
-import NoteCard from '../../components/note-components/note-card/NoteCard';
-import Note from './note/Note';
-import { getNotes, setNewNote } from '../../services/notesLocalStorageService';
+import React, { useEffect, useState } from "react";
+import CardComponent from "../../components/card-component/CardComponent";
+import { MdAdd } from "react-icons/md";
+import styles from "./Notes.module.css";
+import NoteCard from "../../components/note-components/note-card/NoteCard";
+import Note from "./note/Note";
+import { getNotes, setNewNote } from "../../services/notesLocalStorageService";
 
 function Notes() {
   const [notes, setNotes] = useState([]);
@@ -14,6 +14,7 @@ function Notes() {
   useEffect(() => {
     const myNotes = getNotes();
     setNotes(myNotes);
+    setCurrentNote(myNotes[0].id);
   }, [updateNotes]);
 
   function onCardClick(id) {
@@ -27,7 +28,7 @@ function Notes() {
     setUpdateNotes(!updateNotes);
   }
 
-  window.addEventListener('notes', (e) => {
+  window.addEventListener("notes", (e) => {
     setUpdateNotes(!updateNotes);
   });
 

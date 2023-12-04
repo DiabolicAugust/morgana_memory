@@ -1,8 +1,10 @@
 .myNotes {
-  width: 30%;
+  width: 20%;
   background-color: white;
   box-sizing: border-box;
   padding: 20px 10px 0px 10px;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .myNotes > p {

@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './TodoCard.module.css';
-import { updateTodoStatus } from '../../../services/todosLocalStorageService';
-import { formatFullDate, formatShortDate } from '../../../services/dateService';
+import React from "react";
+import styles from "./TodoCard.module.css";
+import { updateTodoStatus } from "../../../services/todosLocalStorageService";
+import { formatFullDate, formatShortDate } from "../../../services/dateService";
 
 const TodoCard = ({ todo }) => {
   return (
@@ -16,11 +16,11 @@ const TodoCard = ({ todo }) => {
       </p>
       {todo.isCompleted ? (
         <p className={styles.todoCompletedCaption}>
-          Finished: {formatShortDate(new Date(todo.dateOfFinish))}
+          Finished: {formatShortDate(todo.dateOfFinish)}
         </p>
       ) : (
         <p className={styles.todoUncompletedCaption}>
-          Created: {formatShortDate(new Date(todo.dateOfCreation))}
+          Created: {formatShortDate(todo.dateOfCreation)}
         </p>
       )}
     </div>

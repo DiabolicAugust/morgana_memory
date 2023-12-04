@@ -1,4 +1,10 @@
 .mainActive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  height: 6em;
   width: max-content;
   min-width: 40%;
   max-width: 100%;
@@ -9,6 +15,12 @@
 }
 
 .mainInactive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  height: 6em;
   width: max-content;
   min-width: 40%;
   max-width: 100%;
