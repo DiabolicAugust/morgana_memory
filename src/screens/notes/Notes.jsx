@@ -38,7 +38,7 @@ function Notes() {
         <p>My Notes</p>
         <CardComponent
           text="Add note"
-          imgElement={<MdAdd size="24px" />}
+          imgElement={<MdAdd size="1.5em" />}
           backgroundColor="#f6f6f6"
           onComponentClick={setEmptyNote}
         />

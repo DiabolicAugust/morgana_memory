@@ -1,5 +1,5 @@
 .myNotes {
-  width: 20%;
+  width: 30%;
   background-color: white;
   box-sizing: border-box;
   padding: 20px 10px 0px 10px;
@@ -8,7 +8,7 @@
 }
 
 .myNotes > p {
-  font-size: 25px;
+  font-size: 3em;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -19,5 +19,5 @@
 
 .main {
   display: flex;
-  width: 75%;
+  width: 100%;
 }

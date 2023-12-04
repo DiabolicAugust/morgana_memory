@@ -1,31 +1,31 @@
-import React from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { menuData } from '../../data/menu';
-import styles from './Sidebar.module.css';
-import { IoIosArrowDown } from 'react-icons/io';
-import { SlSettings } from 'react-icons/sl';
+import React from "react";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { menuData } from "../../data/menu";
+import styles from "./Sidebar.module.css";
+import { IoIosArrowDown } from "react-icons/io";
+import { SlSettings } from "react-icons/sl";
 // import { GoKebabHorizontal } from 'react-icons/go';
-import CardComponent from '../card-component/CardComponent';
+import CardComponent from "../card-component/CardComponent";
 
 const Sidebar = () => {
   const location = useLocation();
   return (
-    <div style={{ display: 'flex', width: '100vw' }}>
+    <div style={{ display: "flex", width: "100vw" }}>
       <div className={styles.main}>
         <CardComponent
           text="Jhon Snow"
           imgElement={
             <img
               src="https://cdn.pixabay.com/photo/2021/02/27/16/25/woman-6055084_1280.jpg"
-              height="28px"
+              height="46px"
               alt=""
             />
           }
-          buttonElement={<IoIosArrowDown size="24px" />}
+          buttonElement={<IoIosArrowDown size="1.5em" />}
         />
         <div className={styles.menu}>
           {menuData.map((e, index) => (
-            <NavLink to={e.url} key={index} style={{ textDecoration: 'none' }}>
+            <NavLink to={e.url} key={index} style={{ textDecoration: "none" }}>
               <CardComponent
                 text={e.title}
                 imgElement={e.image}
@@ -36,8 +36,8 @@ const Sidebar = () => {
         </div>
         <CardComponent
           text="Settings"
-          imgElement={<SlSettings size="24px" />}
-          onComponentClick={() => console.log('meow')}
+          imgElement={<SlSettings size="1.5em" />}
+          onComponentClick={() => console.log("meow")}
         />
       </div>
       <Outlet className={styles.outlet} />
