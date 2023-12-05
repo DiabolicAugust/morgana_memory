@@ -1,30 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ReadingList.module.css";
 import BookCard from "../../components/reading-list-components/book-card/BookCard";
+import AlertDialog from "../../components/alert-dialog/AlertDialog";
+import AddBookDialog from "../../components/alert-dialog/add-book-dialog/AddBookDialog";
+import { getBooks } from "../../services/readingListlocalStorageService";
 
 const ReadingList = () => {
-  const data = [
-    {
-      title: "Twilight",
-      author: "Stephenie Meyer",
-      score: 5,
-      image_url:
-        "https://m.media-amazon.com/images/I/615ZIxEDozL._AC_UF1000,1000_QL80_.jpg",
-      isCompleted: true,
-    },
-  ];
+  const [addBookDialogOpened, setAddBookDialogOpened] = useState(false);
+  const [books, setBooks] = useState([]);
+  console.log("rerender");
+
+  useEffect(() => setBooks(getBooks()), []);
+
+  function closeDialog() {
+    setAddBookDialogOpened(false);
+  }
+
+  window.addEventListener("books", (e) => {
+    setBooks(getBooks());
+  });
 
   return (
-    <div className={styles.main}>
-      <h1>Reading list</h1>
-      <div>
-        <input type="text" />
-        <button>Add</button>
+    <>
+      <div className={styles.main}>
+        <h1>Reading list</h1>
+        <div>
+          <button
+            className={styles.addButton}
+            onClick={() => setAddBookDialogOpened(true)}
+          >
+            Add
+          </button>
+        </div>
+        <div className={styles.booksList}>
+          <div className={styles.scrollableContainer}>
+            {books.map((book) => (
+              <BookCard key={book.id} book={book} />
+            ))}
+          </div>
+        </div>
       </div>
-      {data.map((book) => (
-        <BookCard book={book} />
-      ))}
-    </div>
+      {addBookDialogOpened && (
+        <AlertDialog>
+          <AddBookDialog onClose={closeDialog} />
+        </AlertDialog>
+      )}
+    </>
   );
 };
 

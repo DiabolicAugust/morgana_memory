@@ -1,0 +1,32 @@
+.main {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 2em;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 36%;
+}
+
+.main > h1 {
+  font-size: 3em;
+}
+
+.main > button {
+  width: 100%;
+  height: 3em;
+  font-size: 1.5em;
+}
+
+.inputs {
+  margin-top: 1em;
+  margin: 1em 0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.inputs > input {
+  padding: 0.5em;
+  font-size: 2em;
+}
