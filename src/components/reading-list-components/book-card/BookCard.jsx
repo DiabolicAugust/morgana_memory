@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import styles from "./BookCard.module.css";
 
 import { TiStarFullOutline } from "react-icons/ti";
 import { MdDone } from "react-icons/md";
 import { MdClose } from "react-icons/md";
-import { updateBookState } from "../../../services/readingListlocalStorageService";
+import {
+  deleteBook,
+  updateBookState,
+} from "../../../services/readingListlocalStorageService";
+import { useSwipeable } from "react-swipeable";
 
 const BookCard = ({ book }) => {
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: (_) => {
+      removeCard(book.id);
+    },
+    preventDefaultTouchmoveEvent: false,
+    trackMouse: true,
+  });
+
+  const removeCard = (idToRemove) => {
+    deleteBook(idToRemove);
+  };
+
   return (
-    <div className={styles.main}>
+    <div className={styles.main} {...swipeHandlers}>
       <img
         src={
           book.image_url ||
@@ -21,7 +37,7 @@ const BookCard = ({ book }) => {
       <div className={styles.author}>{book.author}</div>
       <div className={styles.score}>
         {Array.from({ length: book.score }, (_, i) => (
-          <TiStarFullOutline size="3em" color="orange" />
+          <TiStarFullOutline size="3em" color="orange" key={i} />
         ))}
       </div>
       <div

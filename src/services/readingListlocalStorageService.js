@@ -15,15 +15,22 @@ export function setBook(book) {
 }
 
 export function updateBookState(newState, bookId) {
-  const otherNotes = getBooks();
+  const otherBooks = getBooks();
 
-  const updatedNotes = otherNotes.map((e) => {
-    if (e.id == bookId) {
+  const updatedBooks = otherBooks.map((e) => {
+    if (e.id === bookId) {
       return { ...e, isCompleted: newState, dateOfEdit: Date.now() };
     }
     return e;
   });
 
-  localStorage.setItem("books", JSON.stringify([...updatedNotes]));
+  localStorage.setItem("books", JSON.stringify([...updatedBooks]));
+  window.dispatchEvent(new Event("books"));
+}
+
+export function deleteBook(bookId) {
+  const otherBooks = getBooks();
+  const updatedBooks = otherBooks.filter((card) => card.id !== bookId);
+  localStorage.setItem("books", JSON.stringify([...updatedBooks]));
   window.dispatchEvent(new Event("books"));
 }

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./AddBookDialog.module.css";
 import { setBook } from "../../../services/readingListlocalStorageService";
 
+import { MdClose } from "react-icons/md";
+
 const AddBookDialog = ({ onClose }) => {
   const [bookImage, setBookImage] = useState("");
   const [title, setTitle] = useState("");
@@ -22,8 +24,18 @@ const AddBookDialog = ({ onClose }) => {
     onClose(); // Calling the onClose function to close the dialog
   };
 
+  const handleScoreChange = (event) => {
+    const value = event.target.value;
+    if (value >= 1 && value <= 5) {
+      setScore(value);
+    }
+  };
+
   return (
     <div className={styles.main}>
+      <div className={styles.closeImage} onClick={onClose}>
+        <MdClose size={"2em"} />
+      </div>
       <h1>Add book</h1>
       <div className={styles.inputs}>
         <input
@@ -48,9 +60,11 @@ const AddBookDialog = ({ onClose }) => {
         />
         <input
           type="number"
-          placeholder="Score"
-          alue={score}
-          onChange={(text) => setScore(text.target.value)}
+          placeholder="Score (1-5)"
+          min="1"
+          max="5"
+          value={score}
+          onChange={handleScoreChange}
         />
       </div>
 

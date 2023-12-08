@@ -8,7 +8,6 @@ import { getBooks } from "../../services/readingListlocalStorageService";
 const ReadingList = () => {
   const [addBookDialogOpened, setAddBookDialogOpened] = useState(false);
   const [books, setBooks] = useState([]);
-  console.log("rerender");
 
   useEffect(() => setBooks(getBooks()), []);
 
@@ -35,7 +34,9 @@ const ReadingList = () => {
         <div className={styles.booksList}>
           <div className={styles.scrollableContainer}>
             {books.map((book) => (
-              <BookCard key={book.id} book={book} />
+              <div key={book.id}>
+                <BookCard book={book} />
+              </div>
             ))}
           </div>
         </div>
